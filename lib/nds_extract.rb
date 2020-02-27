@@ -76,8 +76,10 @@ hash = {}
 index = 0
   while index < collection.length do
   
-  
-  
+  if !hash[:studio]
+    hash[:studio] = 0
+  else
+  hash[:studio]
   
   
   index += 1
