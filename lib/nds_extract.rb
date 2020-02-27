@@ -77,7 +77,7 @@ index = 0
   while index < collection.length do
   
   if !hash[:studio]
-    hash[:studio] = 0
+    hash[:studio] = collection[index][:studio]
   else
   hash[:studio]
   
