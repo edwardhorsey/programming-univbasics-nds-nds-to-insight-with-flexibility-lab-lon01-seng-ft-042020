@@ -100,8 +100,23 @@ def movies_with_directors_set(source)
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
   
-  
-  
+master_array = []
+index = 0
+
+  while index < source.count do
+  # run movies_with_director_key on each director
+    name = source[index][:name]
+    movies_collection = source[index][:movies]
+    mwdk = movies_with_director_key(name, movies_collection)
+    master_array << mwdk
+    index += 1
+
+  end
+  #   add the returned arrays to a master array 
+    
+return master_array
+# return_the array
+
 end
 
 # ----------------    End of Your Code Region --------------------
