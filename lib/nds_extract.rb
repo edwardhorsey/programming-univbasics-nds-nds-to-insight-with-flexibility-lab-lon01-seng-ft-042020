@@ -72,17 +72,20 @@ def gross_per_studio(collection)
   # Hash whose keys are the studio names and whose values are the sum
   # total of all the worldwide_gross numbers for every movie in the input Hash
   
-hash = {}
 index = 0
+hash = {}
   while index < collection.length do
-  
- hash[:studio] = collection[index][:studio]
-  else
-  hash[:studio]
-  
-  
+    studio_key = collection[index][:studio]
+    movie_gross = collection[index][:worldwide_gross]
+    if !hash[studio_key]
+      hash[studio_key] = movie_gross
+    else
+      hash[studio_key] += movie_gross
+    end
   index += 1
   end
+return hash
+end
   
 return hash
 end
