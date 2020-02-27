@@ -102,7 +102,6 @@ def movies_with_directors_set(source)
   
   
   
-  movies array only filled with hashes with director inside
 end
 
 # ----------------    End of Your Code Region --------------------
